@@ -23,6 +23,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    // Convert inputted text to phone numbers
+    @IBAction func convert(_ sender: Any) {
+        
+    }
 }
 
