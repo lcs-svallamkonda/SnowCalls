@@ -10,6 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //MARK: Properties
+    @IBOutlet weak var input: UITextView!
+    @IBOutlet weak var output: UITextView!
+    
+    //MARK: Initilazers
+    
+    //MARK: Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
