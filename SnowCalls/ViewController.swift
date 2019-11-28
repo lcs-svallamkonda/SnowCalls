@@ -26,6 +26,9 @@ class ViewController: UIViewController {
     // Convert inputed text to phone numbers
     @IBAction func convert(_ sender: Any) {
        
+        //clear output every timebutton is pressed
+        output.text = ""
+        
         //guard against no input
         guard let inputText = input.text, inputText.count > 0 else {
             output.text = "Please enter the text you would like converted"
