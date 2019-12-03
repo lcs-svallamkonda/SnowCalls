@@ -24,6 +24,11 @@ class ViewController: UIViewController, UITextViewDelegate  {
         
         //make this class be the delgate for the input text field
         input.delegate = self
+        
+        //Give the focus to the input text view when the program begins
+        input.text = ""
+        output.text = ""
+        input.becomeFirstResponder() //set the focus on input field
     }
     
     // Convert inputed text to phone numbers
