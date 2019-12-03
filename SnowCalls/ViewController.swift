@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     //MARK: Properties
     @IBOutlet weak var input: UITextView!
     @IBOutlet weak var output: UITextView!
@@ -22,10 +22,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
+    
     // Convert inputed text to phone numbers
     @IBAction func convert(_ sender: Any) {
-       
+        
         //clear output every timebutton is pressed
         output.text = ""
         
@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         //empty string to build phone number
         var numberLine = ""
         
-       //chop input into individual lines
+        //chop input into individual lines
         let lines = inputText.split(separator: "\n")
         
         //iterate for every line
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
                 
                 // Only add an output chracter when we have less than 10 output characters
                 if numberLine.count < 10 {
-
+                    
                     //switch statement to convert characters and add them to numberLine string
                     switch character {
                     case "0":
@@ -75,11 +75,9 @@ class ViewController: UIViewController {
                     default:
                         numberLine += ""
                     }
-
+                    
                 }
                 
-                
-
                 
             }
             
@@ -88,6 +86,9 @@ class ViewController: UIViewController {
         
         //for testing purposes print numberLine
         print(numberLine)
+        
+        //show results as output in view
+        output.text = numberLine
     }
 }
 
