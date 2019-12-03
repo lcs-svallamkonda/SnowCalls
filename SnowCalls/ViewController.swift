@@ -48,7 +48,7 @@ class ViewController: UIViewController {
             for character in line{
                 
                 // Only add an output chracter when we have less than 10 output characters
-                if numberLine.count < 10 {
+                if numberLine.count < 12 {
                     
                     //switch statement to convert characters and add them to numberLine string
                     switch character {
@@ -75,7 +75,9 @@ class ViewController: UIViewController {
                     default:
                         numberLine += ""
                     }
-                    
+                    if numberLine.count == 3 || numberLine.count == 7 {
+                        numberLine += "-"
+                    }
                 }
                 
                 
