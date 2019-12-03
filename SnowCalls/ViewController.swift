@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextViewDelegate  {
     
     //MARK: Properties
     @IBOutlet weak var input: UITextView!
@@ -21,6 +21,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        //make this class be the delgate for the input text field
+        input.delegate = self
     }
     
     // Convert inputed text to phone numbers
@@ -89,8 +92,17 @@ class ViewController: UIViewController {
         //for testing purposes print numberLine
         print(numberLine)
         
-        //show results as output in view
-        output.text = numberLine
+        
     }
+
+//MARK: UITextViewDelagates Methods
+    
+    //Called automatically when the contents of the text view are changed
+    func textViewDidChange(_ textView: UITextView) {
+        
+        //Reset output text view
+        output.text = ""
+    }
+
 }
 
